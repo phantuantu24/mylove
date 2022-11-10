@@ -99,31 +99,11 @@ body {
    
   </div>
     <h1 class="name">Đinh Thị Cẩm Tiên</h1>
-<!--     <audio id="myAudio" preload loop autoplay="true">
+    <audio id="myAudio" preload loop autoplay="true">
 	<source src="./music.mp3" ></source>
-    </audio> -->
+    </audio>
 
 <script>
-window.onload = function() {
-window.addEventListener('load', function () {
-        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        var source = audioCtx.createBufferSource();
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', './music.mp3');
-        xhr.responseType = 'arraybuffer';
-        xhr.addEventListener('load', function (r) {
-            audioCtx.decodeAudioData(
-                    xhr.response, 
-                    function (buffer) {
-                        source.buffer = buffer;
-                        source.connect(audioCtx.destination);
-                        source.loop = false;
-                    });
-            source.start(0);
-        });
-        xhr.send();
-    });
-}
 var settings = {
   particles: {
     length:   1500, // maximum amount of particles
